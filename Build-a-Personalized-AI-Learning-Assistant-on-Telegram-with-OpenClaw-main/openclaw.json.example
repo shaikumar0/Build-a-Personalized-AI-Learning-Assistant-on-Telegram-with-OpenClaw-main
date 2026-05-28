@@ -1,0 +1,15 @@
+{
+
+  "gateway": {
+    "mode": "local"
+  },
+  "model": {
+    "provider": "ollama",
+    "model": "llama3:8b"
+  },
+  "plugins": {
+    "entries": {}
+  }
+
+}
+

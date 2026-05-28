@@ -1,0 +1,17 @@
+version: "3.8"
+services:
+  openclaw:
+    build: .
+    restart: unless-stopped
+    environment:
+      - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
+      - OLLAMA_URL=${OLLAMA_URL}
+      - MODEL=${MODEL}
+    volumes:
+      - ./skills:/root/.openclaw/skills:ro
+      - openclaw-data:/root/.openclaw
+    ports:
+      - "3001:3000"
+
+volumes:
+  openclaw-data:
